@@ -391,13 +391,10 @@ All command-line parameters, except `--init`, can be included in an init script 
 
 Prior to sending or receiving any data:
 
-1. Disable the clock.
+1. Disable the clock. The clock can be toggled with: `[L-Shift]` `[MODES]` `|MISC|` `|CLK|`
 
-  The clock can be toggled on an off with: `[L-Shift]` `[MODES]` `|MISC|` `|CLK|`
+1. Set the communication parameters. In the HOME directory, execute: `{ 2400 0 0 0 3 3 }` `'IOPAR'` `[STO]`. Or use the UI: `[L-Shift]` `[I/O]` `|IOPAR|`.
 
-1. Set the communication parameters.
-
-  This can be done via the UI: `[L-Shift]` `[I/O]` `|IOPAR|`.
          _________________________
         |                         |
         |  IR/wire:       IR      |
@@ -407,15 +404,9 @@ Prior to sending or receiving any data:
         |  cksum: 3  translate: 3 |
         |_________________________|
 
-  Alternately, execute the following in the HOME directory: `{ 2400 0 0 0 3 3 }` `'IOPAR'` `[STO]`
+1. Open the IR port. `[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|OPENIO|`
 
-1. Open the IR port.
-
-  `[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|OPENIO|`
-
-1. (Optional) When done, close the HP48G's IR port. This will save power.
-
-  `[L-Shift]` `[I/O]` `[NXT]` `|CLOSEIO|`
+1. (Optional) When done, close the IR port to save power. `[L-Shift]` `[I/O]` `[NXT]` `|CLOSEIO|`
 
 Pressing a key on the HP48G causes an interrupt to occur. The interrupt may interfere with I/O operations. Because of this, do not press any keys on the HP48G while I/O is occurring (unless the intent of the keypress is to abort the transfer).
 
