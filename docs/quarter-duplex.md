@@ -28,6 +28,8 @@ Below, `H:` means the HP48G, `C:` means the computer.
 1. H: `[L-Shift]` `[I/O]` `[NXT]` `|XRECV|`
 1. C: `xmodem send ./progs/PAS48`
 
+Alternatively, set `ignore-sec` and `ignorerx` in `hpir.ini` and run `python hpir.py --xmodem --send ./progs/PAS48`.
+
 #### Kermit
 1. C: Plug device into headphone port.
 1. C: `python hpir.py`
@@ -35,17 +37,21 @@ Below, `H:` means the HP48G, `C:` means the computer.
 1. C: `kermit set ignorerx True`
 1. H: `[L-Shift]` `[I/O]` `|RECV|`
 1. C: `kermit send ./progs/PAS48`
-1. C: `python hpir.py --kermit --send ./progs/PAS48`
+
+Alternatively, set `ignore-sec` and `ignorerx` in `hpir.ini` and run `python hpir.py --send ./progs/PAS48`.
 
 #### Serial
 
 1. C: Plug device into headphone port.
-1. C: `python hpir.py --serial --send ./progs/PAS48`
+1. C: `python hpir.py`
+1. C: `serial send file ./progs/PAS48`
 1. H: `[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|BUFLEN|` `[DROP]` `|SRECV|`    
 1. H: `<< "12" SWAP + # 402Bh SYSEVAL # 62B9Ch SYSEVAL >>` `[EVAL]`
 1. H: `'PAS48'` `[STO]`
 
-Step 3 will leave a string starting with 'HPHP48...' on the stack. Step 4 will convert that string to a binary object. FIXIT or OBJFIX perform the same function and may give better results. Use as desired.
+Step 4 will leave a string starting with 'HPHP48...' on the stack. Step 5 will convert that string to a binary object. FIXIT or OBJFIX perform the same function and may give better results. Use as desired.
+
+Alternatively, run `python hpir.py --serial --send ./progs/PAS48`.
 
 ## Sending data from HP48G to computer
 
