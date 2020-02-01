@@ -15,7 +15,7 @@ Normally, quarter-duplex will not work with Kermit or XMODEM because both protoc
 
 Open the IR port on the HP48G before transmitting to it. (`[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|OPENIO|`)
 
-If the data to be sent is more that 256 bytes, do not use the serial protocol. The serial buffer of the HP48G can hold a maximum of 256 bytes; anything over that is ignored.
+If the data to be sent is more that 255 bytes, do not use the serial protocol. The serial buffer of the HP48G can hold a maximum of 255 bytes; anything over that is ignored.
 
 Below, `H:` means the HP48G, `C:` means the computer.
 

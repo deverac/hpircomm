@@ -260,8 +260,8 @@ class TestSendChars(Base):
 
     @patch('src.log.w')
     def test_should_warn_when_big_buffer(self, mock_log):
-        buf_ok = [65] * 256
-        buf_too_big = [65] * 257
+        buf_ok = [65] * 255
+        buf_too_big = [65] * 256
 
         ser.send_chars(buf_ok)
 
@@ -269,7 +269,7 @@ class TestSendChars(Base):
 
         ser.send_chars(buf_too_big)
 
-        sert(mock_log).called_once_with("Text length exceeds calc's buffer size (256 chars).")
+        sert(mock_log).called_once_with("Text length exceeds calc's buffer size (255 chars).")
 
 
 

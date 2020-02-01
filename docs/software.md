@@ -116,7 +116,7 @@ Command |  Description
 `set` NAME VAL    | Set config name.
 `show` [NAME]     | Show config values. Show matching NAMEs, if supplied.
 
-The calculator's serial buffer can hold a maximum of 256 bytes. All data past 256 bytes will be ignored by the calculator. If the `log-level` is set to `3`, or higher, a warning will be printed when sending more than 256 bytes.
+The calculator's serial buffer can hold a maximum of 255 bytes. All data past 255 bytes will be ignored by the calculator. If the `log-level` is set to `3`, or higher, a warning will be printed when sending more than 255 bytes.
 
 ## Serial config
 

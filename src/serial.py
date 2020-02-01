@@ -76,8 +76,8 @@ class Serial:
 
     def send_chars(self, chars):
         log.i('Sending chars: {}'.format(chars))
-        if len(chars) > 256:
-            log.w("Text length exceeds calc's buffer size (256 chars).")
+        if len(chars) > 255:
+            log.w("Text length exceeds calc's buffer size (255 chars).")
         parity_bytes = util.set_parity(bytearray(chars), int(self.config['parity'].value))
         self.transport.write_bytes(parity_bytes)
 
