@@ -2,7 +2,7 @@
 
 HpirComm is a Python 2.7 program that can communicate with an HP48G calculator through its IR port by using the computer's sound card as a modem. The Kermit, XMODEM or serial protocol can be used for communication. A simple hardware device must be constructed.
 
-HpirComm supports '[quarter-duplex](./progs/quarter-duplex.md)' mode. Normally, HpirComm and HP48G operate in half-duplex mode, which requires both a receiver and a transmitter. If _only_ a receiver, or _only_ a transmitter is available, HpirComm can still send and receive files.
+HpirComm supports '[quarter-duplex](./docs/quarter-duplex.md)' mode. Normally, HpirComm and HP48G operate in half-duplex mode, which requires both a receiver and a transmitter. If _only_ a receiver, or _only_ a transmitter is available, HpirComm can still send and receive files.
 
 The only external modules that are used are [`PyAudio`](https://pypi.org/project/PyAudio/) for cross-platform audio control, and (optionally) [`coverage`](https://pypi.org/project/coverage/) for tests.
 
