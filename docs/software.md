@@ -417,7 +417,7 @@ Prior to sending or receiving any data:
 
   `[L-Shift]` `[I/O]` `[NXT]` `|CLOSEIO|`
 
-Pressing a key on the HP48G causes an interrupt to occur. The interrupt may may interfere with I/O operations. Because of this, do not press any keys on the HP48G while I/O is occurring (unless the intent of the keypress is to abort the transfer).
+Pressing a key on the HP48G causes an interrupt to occur. The interrupt may interfere with I/O operations. Because of this, do not press any keys on the HP48G while I/O is occurring (unless the intent of the keypress is to abort the transfer).
 
 # Sending and receiving
 
