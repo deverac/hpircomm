@@ -10,7 +10,7 @@ The device can be constructed from the following three items:
 
 For item 3, if possible, use an IR photodiode rather than a second IR emitter. Either will work, but an IR photodiode will perform much better than an IR emitter. The advantage of using two IR emitters is that they are relatively easy to find as they can be salvaged from old remote controls.
 
-The [*HP 48 Technical Interfacing Guide*]('./48techni.pdf') specifies that the IR wavelength used for communication is 940nm. This is the same wavelength that many consumer IR remotes transmit at.
+The [*HP 48 Technical Interfacing Guide*](./48techni.pdf) specifies that the IR wavelength used for communication is 940nm. This is the same wavelength that many consumer IR remotes transmit at.
 
 > If you only have a *single* IR emitter (i.e. you do not have an IR photodiode or second IR emitter), it is still possible to communicate with the HP48G, but communication will be severely restricted because the single IR emitter can be used to either *only* transmit or *only* receive.
 >
@@ -123,7 +123,7 @@ Testing the PH-DTA300 components.
 
 The IR emitter and IR receiver were added to a plastic 'frame'. The frame is a wall plug for covering electrical outlets, which I drilled holes in.
 
-If exact dimensions for the positioning of the IR emitter and IR photodiode are desired, consult the [*HP 48 Technical Interfacing Guide*]('./48techni.pdf').
+If exact dimensions for the positioning of the IR emitter and IR photodiode are desired, consult the [*HP 48 Technical Interfacing Guide*](./48techni.pdf).
 
 ![Case](./img/case.jpg)
 
