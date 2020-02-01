@@ -14,6 +14,7 @@ HpirComm is released under [GPL version 2](https://www.gnu.org/licenses/old-lice
 
 1. Cut a male-to-male 3.5mm audio cord (mono or stereo) in half.
 1. Connect one half to an IR emitter; the other half to an IR photodiode.
+
           _                                 _
          ( )_______________                ( )_______________
          |_|             __|_              |_|             __|__
@@ -32,6 +33,7 @@ HpirComm is released under [GPL version 2](https://www.gnu.org/licenses/old-lice
 
 1. Plug the Transmitter into the headphone port and the Receiver into the microphone port.
 1. Align Transmitter and Receiver with HP48G.
+
                                   _______________________
                                   |        COMPUTER    
                                   |                      
@@ -72,4 +74,3 @@ run_tests.py  | Run Unit Tests
 cov.py        | Run Unit Tests and generate Coverage report
 decode_wav.py | Utility program
 clean.sh      | Removes auto-generated files
-
