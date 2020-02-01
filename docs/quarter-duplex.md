@@ -22,23 +22,21 @@ Below, `H:` means the HP48G, `C:` means the computer.
 #### XMODEM
 1. C: Plug device into headphone port.
 1. C: `python hpir.py`
-1. C: `xmodem set ignore-sec 0.5`
 1. C: `xmodem set ignorerx True`
 1. H: `'PAS48'`     # Put name to hold data on stack
 1. H: `[L-Shift]` `[I/O]` `[NXT]` `|XRECV|`
 1. C: `xmodem send ./progs/PAS48`
 
-Alternatively, set `ignore-sec` and `ignorerx` in `hpir.ini` and run `python hpir.py --xmodem --send ./progs/PAS48`.
+Alternatively, set `ignorerx` in `hpir.ini` and run `python hpir.py --xmodem --send ./progs/PAS48`.
 
 #### Kermit
 1. C: Plug device into headphone port.
 1. C: `python hpir.py`
-1. C: `kermit set ignore-sec 0.5`
 1. C: `kermit set ignorerx True`
 1. H: `[L-Shift]` `[I/O]` `|RECV|`
 1. C: `kermit send ./progs/PAS48`
 
-Alternatively, set `ignore-sec` and `ignorerx` in `hpir.ini` and run `python hpir.py --send ./progs/PAS48`.
+Alternatively, set `ignorerx` in `hpir.ini` and run `python hpir.py --send ./progs/PAS48`.
 
 #### Serial
 

@@ -260,7 +260,7 @@ HP48G command | Description
 
 `ignore-sec` The number of seconds to wait between sending packets. This is only relevant if `ignorerx` is `true`.
 
-`ignorerx` When `true`, this ignores all transmissions from the HP48G and pretends a valid response was received. When using '[quarter-duplex](./quarter-duplex.md)' mode and the Kermit or XMODEM protocol, this must be set to `true`.
+`ignorerx` When `true`, this ignores all transmissions from the HP48G and pretends a valid response was received. When using '[quarter-duplex](./quarter-duplex.md)' mode and the Kermit or XMODEM protocol, this must be set to `true`. See also `ignore-sec`.
 
 `order-by` The directory sort keys: d=Date, n=Name, s=Size. `sdn` means sort by Size, then by Date, then by Name.
 
