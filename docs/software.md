@@ -417,31 +417,31 @@ Pressing a key on the HP48G causes an interrupt to occur. The interrupt may inte
 
 __Send from computer to HP48G__
 
-  1. Open the HP48G's serial port.
-    1. `[L-Shift]` `[I/O]`
-    1. `[NXT]`
-    1. `|SERIAL|`
-    1. `|OPENIO|`
-  1. Send data from the computer.  
-    1. `python hpir.py --serial --send notes.txt`
-  1. Display the received data on HP48G.
-    1. `[L-Shift]` `[I/O]`
-    1. `[NXT]`
-    1. `|SERIAL|`
-    1. `|BUFLEN|`
-    1. `[DROP]`
-    1. `|SRECV|`
+1. Open HP48G's serial port.
+    * `[L-Shift]` `[I/O]`
+    * `[NXT]`
+    * `|SERIAL|`
+    * `|OPENIO|`
+1. Send data from computer.
+    * `python hpir.py --serial --send notes.txt`
+1. Display received data on HP48G.
+    * `[L-Shift]` `[I/O]`
+    * `[NXT]`
+    * `|SERIAL|`
+    * `|BUFLEN|`
+    * `[DROP]`
+    * `|SRECV|`
 
 __Send from HP48G to computer__
 
-  1. Receive data on computer.  
-    1. `python hpir.py --serial --receive hello.txt --watchars ZZ`
-  1. Send data from HP48G.
-    1. "Hello World!ZZ"
-    1. `[L-Shift]` `[I/O]`
-    1. `[NXT]`
-    1. `|SERIAL|`
-    1. `|XMIT|`
+1. Receive data on computer.
+    * `python hpir.py --serial --receive hello.txt --watchars ZZ`
+1. Send data from HP48G.
+    * "Hello World!ZZ"
+    * `[L-Shift]` `[I/O]`
+    * `[NXT]`
+    * `|SERIAL|`
+    * `|XMIT|`
 
 
 ### XMODEM
@@ -450,56 +450,56 @@ The XMODEM protocol specifies that the sender should wait until it receives a pa
 
 __Send from computer to HP48G__
 
-  1. Open HP48G's serial port.
-    1. `[L-Shift]` `[I/O]`
-    1. `[NXT]`
-    1. `|SERIAL|`
-    1. `|OPENIO|`
-  1. Send data from computer.  
-    1. `python hpir.py --xmodem --send note.txt`
-  1. Receive data on HP48G.
-    1. `'NOTE'`           # Put name to store data on stack
-    1. `[L-Shift]` `[I/O]`
-    1. `[NXT]`
-    1. `|XRECV|`
+1. Open HP48G's serial port.
+    * `[L-Shift]` `[I/O]`
+    * `[NXT]`
+    * `|SERIAL|`
+    * `|OPENIO|`
+1. Send data from computer.
+    * `python hpir.py --xmodem --send note.txt`
+1. Receive data on HP48G.
+    * `'NOTE'`           # Put name to store data on stack
+    * `[L-Shift]` `[I/O]`
+    * `[NXT]`
+    * `|XRECV|`
 
 __Send from HP48G to computer__
 
-  1. Send data from HP48G.
-    1. `'PAS48'`           # Put name to send on stack
-    1. `[L-Shift]` `[I/O]`
-    1. `[NXT]`
-    1. `|XSEND|`
-  1. Receive data on computer.  
-    1. `python hpir.py --xmodem --receive PAS48`
+1. Send data from HP48G.
+    * `'PAS48'`           # Put name to send on stack
+    * `[L-Shift]` `[I/O]`
+    * `[NXT]`
+    * `|XSEND|`
+1. Receive data on computer.
+    * `python hpir.py --xmodem --receive PAS48`
 
 
 ### Kermit
 
 __Using the HP48G Kermit server__
 
-  1. Start the HP48G Kermit server: `[L-Shift]` `[R-Arrow]`
-  1. Send data to the HP48G: `python hpir.py --send ./progs/PAS48`
-  1. Get data from the HP48G: `python hpir.py --get PAS48`
+1. Start the HP48G Kermit server: `[L-Shift]` `[R-Arrow]`
+1. Send data to the HP48G: `python hpir.py --send ./progs/PAS48`
+1. Get data from the HP48G: `python hpir.py --get PAS48`
 
 
 __Using the HpirComm Kermit server__
 
-  1. Start the HpirComm Kermit server.
-    1. `python hpir.py`
-    1. `kermit server`
-  1. Get data from the computer.  
-    1. `./progs/PAS48`
-    1. `[L-Shift]` `[I/O]`
-    1. `|SRVR|`
-    1. `|KGET|`
-  1.  Send data to the computer.  
-    1. `'PAS48'`
-    1. `[L-Shift]` `[I/O]`
-    1. `|SEND|`
+1. Start HpirComm Kermit server.
+    * `python hpir.py`
+    * `kermit server`
+1. Get data from computer.
+    * `./progs/PAS48`
+    * `[L-Shift]` `[I/O]`
+    * `|SRVR|`
+    * `|KGET|`
+1.  Send data to computer.
+    * `'PAS48'`
+    * `[L-Shift]` `[I/O]`
+    * `|SEND|`
 
 
-Instead of transfering files by using commands, the HP48G's UI can be used to transfer files. `[R-Shift]` `[I/O]` `Select Transfer...`. Specify the Type and Name. Populate any additional fields as needed and then issue the desired operation (`|SEND|`, `|RECV|`, `|KGET|`, `|XRECV|`, `|XSEND|`). If the HpirComm Kermit server is not running, the complementary command will need to be executed on the computer. For example, if the HP48G is sending a file using XMODEM, then `python hpir.py --xmodem --receive DATFIL` must be executed on the computer in order to receive the file that is being sent by the HP48G.
+Instead of transfering files by using commands, the HP48G's UI can be used to transfer files. `[R-Shift]` `[I/O]` `Select Transfer...`. Specify the Type and Name. Populate any additional fields as needed and then issue the desired operation (`|SEND|`, `|RECV|`, `|KGET|`, `|XRECV|`, `|XSEND|`). If the HpirComm Kermit server is not being used, the complementary command will need to be executed on the computer. For example, if the HP48G is sending a file using XMODEM, then `python hpir.py --xmodem --receive DATFIL` must be executed on the computer in order to receive the file that is being sent by the HP48G.
 
 # Bugs
 
