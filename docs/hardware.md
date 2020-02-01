@@ -138,20 +138,19 @@ The finished device. A white screw-top encloses the case. A red rubber band was 
 
 Although the IR receiver salvaged from Fisher PH-DTA300 worked for me I would recommend NOT using an IR receiver. Use IR photodiodes and/or IR emitters, instead. I do not know if the Fisher IR receiver worked because it was 'compatible' with the HP48G or because I accidentally electrically damaged the component (which may have burnt out or shorted internal components). The wiring below worked for me.
 
-       _
-      ( )___________________________
-      |_|                           |
-      |_|                           |
-      | |______________________     |   (Not used)
-     _|_|_                     |    |    |
-    |     |                ____|____|____|____                       
-    |     |                |  Vs   Out  GND  |
-    |     |                |_____        ____|
-    \     /                      \______/   
-     \___/
-      ||
-      ||
-
+                                    _
+         __________________________( )
+        |                          |_|
+        |                          |_|
+        |     _____________________| |
+        |    |                    _|_|_
+        |    |   (Not used)      |     |
+    ____|____|____|____          |     |
+    |  Out   Vs  GND  |          |     |
+    |_____        ____|          \     /
+          \______/                \___/
+                                   ||
+                                   ||
 
 I also tried using a (disassembled) Streamzap IR receiver. It did not work. More accurately, many bytes transferred correctly, but some were always corrupted.
 
@@ -168,6 +167,6 @@ An __IR emitter__ (a.k.a. IR LED) is a simple electrical component. It has two p
 An __IR receiver__ is a more complex electrical component. It has three pins and internal circuitry. An IR receiver is 'matched' with an IR transmitter (a.k.a. remote). When a button is pressed on the remote, it generates a code. In simple terms, the code is added to a carrier frequency and the IR transmitter emits the resulting signal as IR light. When the IR light from the remote falls on the IR receiver, the IR receiver filters out the carrier frequency, leaving the transmitted code. The code is then output by the receiver.
 
 
-![IR receiver block diagram](./img/ir-block-dia.jpg)
+![IR receiver block diagram](./img/ir-rcvr-block.png)
 
-A block diagram of an IR receiver (above). IR receivers have internal circuitry that may interfere with the 'raw' signal emitted from the HP48G.
+A block diagram of an IR receiver ([source](https://www.mouser.com/new/vishay/vishay-tsopx-ir-receivers/)). IR receivers have internal circuitry that may interfere with the 'raw' signal emitted from the HP48G.
