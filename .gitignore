@@ -1,0 +1,4 @@
+.hpirhist
+.coverage
+*.pyc
+htmlcov/
