@@ -1,0 +1,56 @@
+%%HP: T(3)A(D)F(.);
+@ For convenience, this COMMA program was extracted from the source in numfmt.zip.
+@ custom menu.
+@ Save under the name 'CST'. (Name is important!)
+@ To execute, press the [CST] button. This will put the keyboard into USER mode.
+@ To cancel USER mode press [L-Shift][USER]
+@ Source of numfmt.txt: https://www.hpcalc.org/details/2844
+{
+{
+  "COMMA"
+  {
+    \<<
+      PATH
+      \<<
+        DROP
+        IF DEPTH 0 > THEN
+          IF DUP TYPE 0 == THEN
+            # 39C1Bh SYSEVAL
+            DUP
+            IF DUP 0 == THEN
+              DROP "0"
+            ELSE
+              DUP ABS SWAP DUP SIGN SWAP XPON
+              \-> n s e
+              \<<
+                IF e 0 < e 11 > OR THEN
+                  n s * \->STR
+                ELSE
+                  s -1 == "-" "" IFTE n IP \->STR "" SWAP
+                  WHILE DUP "" \=/ REPEAT
+                    SWAP
+                    IF DUP "" \=/ THEN
+                      "," SWAP +
+                    END
+                    OVER DUP SIZE DUP 2 - SWAP SUB SWAP + SWAP 1 OVER
+                    SIZE 3 - SUB
+                  END
+                  DROP +
+                  IF n FP 0 \=/ THEN
+                    n FP \->STR +
+                  END
+                END
+              \>>
+            END
+            "1:                    " OVER SIZE 22 SWAP - 1 SWAP SUB SWAP +
+            # 123E5h SYSEVAL # 3915Dh SYSEVAL
+          END
+        END
+      \>>
+      HOME '\GbENTER' STO EVAL
+      -62 SF -63 SF
+    \>>
+    \<< PATH HOME '\GbENTER' PURGE EVAL -62 CF -63 CF \>>
+  }
+}
+}

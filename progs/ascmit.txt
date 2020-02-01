@@ -1,0 +1,30 @@
+%%HP: T(3)A(D)F(.);
+@ Transmit an ASC-encoded object over the serial port.
+@ This program depends on the ->ASC program.
+@
+@ This program is intended to be used when two-way communication
+@ is not available. If two-way communication is available, using
+@ the Kermit or XMODEM protocol to transfer data will be faster
+@ and more reliable.
+@
+@ Usage:
+@  1. Put an object name (e.g. a program name) on top of the stack.
+@  2. Execute this program.
+@ 
+\<<
+  RCL
+  \->ASC
+  65
+  \-> dat n
+  \<<
+    1
+    dat SIZE
+    FOR I
+      dat
+      I
+      I n + 1 -
+      SUB
+      XMIT
+    n STEP
+  \>>
+\>>

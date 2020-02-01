@@ -1,0 +1,12 @@
+%%HP: T(3)A(D)F(.);
+@ Correct a program that was downloaded incorrectly.
+@ This is similar to OBJFIX and FIXIT.
+@
+@ When a program is downloaded incorrectly, the stack will
+@ contain a string starting with 'HPHP48...'. This program
+@ can correct the issue by converting the string to the
+@ intended binary object.
+@
+@ Source: https://www.hpcalc.org/hp48/docs/faq/48faq-9.html
+@ Checksum: # 8FEh
+<< "12" SWAP + # 402Bh SYSEVAL # 62B9Ch SYSEVAL >>
