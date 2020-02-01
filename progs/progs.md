@@ -20,6 +20,6 @@ CST.COMMA.txt | A trimmed-down version of CST.NUMFMT containing only the COMMA m
 [SOLTAIR](https://www.hpcalc.org/details/4293) | A peg-jump solitaire game on a cross-shaped board. | 1,979
 [sptr.txt](https://www.hpcalc.org/hp48/docs/faq/48faq-6.html#ss6.11) | A short UserRPL program which performs a similar function as OBJFIX and FIXIT. | 446
 [STK5](https://www.hpcalc.org/details/2666) | A 5 or 7 line stack replacement program. When entering new values, the stack is pushed up which completely hides all of `5:` and the top two pixel rows of `4:`. Set flag 30 to exit program (`30` `[MODES]` `\|FLAGS\|` `\|SF\|`). Does not work with NUMFMT. | 504
-[STKD.LIB](https://www.hpcalc.org/details/2665) | A 5 or 7 line stack replacement library. When entering new values, the stack does not move. The input line completely obscures all of `1:` and the bottom pixel row of `2:`. Program can exited via the LIBRARY menu. Does not work with NUMFMT. | 1,044
+[STKD.LIB](https://www.hpcalc.org/details/2665) | A 5 or 7 line stack replacement library. When entering new values, the stack does not move. The input line completely obscures all of `1:` and the bottom pixel row of `2:`. Program can be exited via the LIBRARY menu. Does not work with NUMFMT. | 1,044
 
 [hpcalc.org](https://www.hpcalc.org/) is an excellent source for more programs and other info.

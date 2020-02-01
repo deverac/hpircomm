@@ -34,7 +34,7 @@ Proceed at your own risk.
 
 1. Ensure the clock is not ticking.
 
-1. Ensure that the communication parameters (`[L-Shift]` `[I/O]` `[IOPAR]`) are configured for `IR`, `binary`, `2400` baud, parity `none`. For calibration, parity should be `none`. After calibration has been completed, parity can be set to anything.
+1. Ensure that the communication parameters (`[L-Shift]` `[I/O]` `|IOPAR|`) are configured for `IR`, `binary`, `2400` baud, parity `none`. For calibration, parity should be `none`. After calibration has been completed, parity can be set to anything.
 
 1. Ensure the serial port has been opened. (`[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|OPENIO|`).
 
