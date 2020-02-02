@@ -32,11 +32,11 @@ Proceed at your own risk.
 
 ## Pre-requisites
 
-1. Ensure the clock is not ticking.
+1. Ensure the clock is not ticking. `<< -40 CF >>`
 
-1. Ensure that the communication parameters (`[L-Shift]` `[I/O]` `|IOPAR|`) are configured for `IR`, `binary`, `2400` baud, parity `none`. For calibration, parity should be `none`. After calibration has been completed, parity can be set to anything.
+1. Ensure that the communication parameters are configured for `IR`, `2400` baud, parity `none`. (`<< -33 SF 2400 BAUD 0 PARITY >>` or use the UI `[L-Shift]` `[I/O]` `|IOPAR|`)
 
-1. Ensure the serial port has been opened. (`[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|OPENIO|`).
+1. Ensure the serial port has been opened. (`[L-Shift]` `[I/O]` `[NXT]` `|SERIAL|` `|OPENIO|`)
 
    The circuitry of the I/O port must be powered in order for the HP48G to receive data. What this means is that when transmitting _to_ the HP48G, its I/O port will not receive any data until the I/O port has been opened (with OPENIO). When transmitting _from_ the HP48G, the I/O port will automatically be opened. The I/O port can be closed by executing `[L-Shift]` `[NXT]` `|CLOSEIO|` or turning the HP48G off. Closing the I/O port when it is not needed will conserve battery power.
 

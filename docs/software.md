@@ -391,16 +391,16 @@ All command-line parameters, except `--init`, can be included in an init script 
 
 Prior to sending or receiving any data:
 
-1. Disable the clock. The clock can be toggled with: `[L-Shift]` `[MODES]` `|MISC|` `|CLK|`
+1. Disable the clock. `<< -40 CF >>` or toggle off with `[L-Shift]` `[MODES]` `|MISC|` `|CLK|`.
 
-1. Set the communication parameters. In the HOME directory, execute: `{ 2400 0 0 0 3 3 }` `'IOPAR'` `[STO]`. Or use the UI: `[L-Shift]` `[I/O]` `|IOPAR|`.
+1. Set the communication parameters. `IR` and `2400` baud are mandatory (`<< -33 SF 2400 BAUD >>`); `binary` is recommended (`<< -35 SF >>`); parity, checksum, and translateIO can be your preference (`<< 0 PARITY 3 CKSM 3 TRANSIO >>`). To configure via the UI: `[L-Shift]` `[I/O]` `|IOPAR|`.
 
          _________________________
         |                         |
         |  IR/wire:       IR      |
         |  ASCII/binary:  binary  |
         |  baud:          2400    |
-        |  parity:        none 0  |  (Parity may differ)
+        |  parity:        none 0  |
         |  cksum: 3  translate: 3 |
         |_________________________|
 
