@@ -100,16 +100,16 @@ Proceed at your own risk.
 
         ======== Overview for Calibrating Receiver ========
 
-        Separate HP48G and transceiver by a 'large' distance  <----|
-        Set microphone volume to its lowest level                  |
-        Transmit bytes from HP48G <-----------------------|        |
+        Set microphone volume to its lowest level
+        Separate HP48G and transceiver by a 'large' distance  <----.
+        Transmit bytes from HP48G <-----------------------.        |
         Was a good signal received by computer?           |        |
             YES -> Success. Stop.                         |        |
             NO  -> Can transceiver be moved closer?       |        |
-                      YES -> Move transceiver closer -----|        |
+                      YES -> Move transceiver closer -----'        |
                       NO  -> Is mic volume at max volume?          |
                                YES -> Failure. Stop.               |
-                               NO  -> Increase mic volume ---------|
+                               NO  -> Increase mic volume ---------'
 
     I would expect that the calibration process will be successful as it has worked with IR emitters from three different remotes. However, your hardware and software (e.g. soundcard drivers) will differ.
 
